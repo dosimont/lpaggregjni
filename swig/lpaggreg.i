@@ -89,9 +89,11 @@ class LPAggregWrapper {
 		void addToVector(double element, int index);
 		void computeQualities(bool normalization);
 		void computeParts(float parameter);
-		int * getParts();
+		void computeDichotomy(float threshold);
 		int getPart(int index);
+		int getPartsNumber();
 		int getVectorsNumber();
 		int getVectorSize();
-		int getPartsNumber();
+		float getParameter(int index);
+		int getParametersNumber();
 };

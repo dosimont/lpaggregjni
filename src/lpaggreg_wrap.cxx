@@ -305,18 +305,16 @@ SWIGEXPORT void JNICALL Java_com_inria_soctrace_tools_paje_lpaggreg_core_jni_lpa
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1getParts(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jlong jresult = 0 ;
+SWIGEXPORT void JNICALL Java_com_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1computeDichotomy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
   LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
-  int *result = 0 ;
+  float arg2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(LPAggregWrapper **)&jarg1; 
-  result = (int *)(arg1)->getParts();
-  *(int **)&jresult = result; 
-  return jresult;
+  arg2 = (float)jarg2; 
+  (arg1)->computeDichotomy(arg2);
 }
 
 
@@ -332,6 +330,21 @@ SWIGEXPORT jint JNICALL Java_com_inria_soctrace_tools_paje_lpaggreg_core_jni_lpa
   arg1 = *(LPAggregWrapper **)&jarg1; 
   arg2 = (int)jarg2; 
   result = (int)(arg1)->getPart(arg2);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_com_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1getPartsNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(LPAggregWrapper **)&jarg1; 
+  result = (int)(arg1)->getPartsNumber();
   jresult = (jint)result; 
   return jresult;
 }
@@ -367,7 +380,24 @@ SWIGEXPORT jint JNICALL Java_com_inria_soctrace_tools_paje_lpaggreg_core_jni_lpa
 }
 
 
-SWIGEXPORT jint JNICALL Java_com_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1getPartsNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jfloat JNICALL Java_com_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1getParameter(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jfloat jresult = 0 ;
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
+  int arg2 ;
+  float result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(LPAggregWrapper **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = (float)(arg1)->getParameter(arg2);
+  jresult = (jfloat)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_com_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1getParametersNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
   int result;
@@ -376,7 +406,7 @@ SWIGEXPORT jint JNICALL Java_com_inria_soctrace_tools_paje_lpaggreg_core_jni_lpa
   (void)jcls;
   (void)jarg1_;
   arg1 = *(LPAggregWrapper **)&jarg1; 
-  result = (int)(arg1)->getPartsNumber();
+  result = (int)(arg1)->getParametersNumber();
   jresult = (jint)result; 
   return jresult;
 }
