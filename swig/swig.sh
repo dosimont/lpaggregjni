@@ -1,6 +1,6 @@
 #!/bin/sh -x
 SRC=/home/dosimont/Documents/github/lpaggreg/src/
-PACKAGE=com.inria.soctrace.tools.paje.lpaggreg.core.jni 
+PACKAGE=fr.inria.soctrace.tools.paje.lpaggreg.core.jni 
 OUTDIR=/home/dosimont/Documents/forge/generoso/soctrace/source/trunk/workspace/com.inria.soctrace.tools.paje.lpaggreg.core/src/com/inria/soctrace/tools/paje/lpaggreg/core/jni
 cp lpaggreg.i $SRC
 cd $SRC
