@@ -28,7 +28,7 @@ USA.
 
 __Compile__
 
-  	$ cd Release
+  		$ cd Release
 		$ make
 		
 __Install__
