@@ -30,6 +30,7 @@ __Configure SWIG parameters__
 
                 $ cd swig
 
+
     Open swig.sh script with your text editor and fill the fields with the
     right values :
     SRC is the location of lpaggreg library source files
