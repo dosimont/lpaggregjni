@@ -335,7 +335,7 @@ SWIGEXPORT jint JNICALL Java_fr_inria_soctrace_tools_paje_lpaggreg_core_jni_lpag
 }
 
 
-SWIGEXPORT jint JNICALL Java_fr_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1getPartsNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_fr_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1getPartNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
   int result;
@@ -344,13 +344,13 @@ SWIGEXPORT jint JNICALL Java_fr_inria_soctrace_tools_paje_lpaggreg_core_jni_lpag
   (void)jcls;
   (void)jarg1_;
   arg1 = *(LPAggregWrapper **)&jarg1; 
-  result = (int)(arg1)->getPartsNumber();
+  result = (int)(arg1)->getPartNumber();
   jresult = (jint)result; 
   return jresult;
 }
 
 
-SWIGEXPORT jint JNICALL Java_fr_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1getVectorsNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_fr_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1getVectorNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
   int result;
@@ -359,7 +359,7 @@ SWIGEXPORT jint JNICALL Java_fr_inria_soctrace_tools_paje_lpaggreg_core_jni_lpag
   (void)jcls;
   (void)jarg1_;
   arg1 = *(LPAggregWrapper **)&jarg1; 
-  result = (int)(arg1)->getVectorsNumber();
+  result = (int)(arg1)->getVectorNumber();
   jresult = (jint)result; 
   return jresult;
 }
@@ -397,7 +397,7 @@ SWIGEXPORT jfloat JNICALL Java_fr_inria_soctrace_tools_paje_lpaggreg_core_jni_lp
 }
 
 
-SWIGEXPORT jint JNICALL Java_fr_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1getParametersNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_fr_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1getParameterNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
   int result;
@@ -406,8 +406,76 @@ SWIGEXPORT jint JNICALL Java_fr_inria_soctrace_tools_paje_lpaggreg_core_jni_lpag
   (void)jcls;
   (void)jarg1_;
   arg1 = *(LPAggregWrapper **)&jarg1; 
-  result = (int)(arg1)->getParametersNumber();
+  result = (int)(arg1)->getParameterNumber();
   jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_fr_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1getGainByIndex(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jdouble jresult = 0 ;
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
+  int arg2 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(LPAggregWrapper **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = (double)(arg1)->getGainByIndex(arg2);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_fr_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1getGainByParameter(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+  jdouble jresult = 0 ;
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
+  float arg2 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(LPAggregWrapper **)&jarg1; 
+  arg2 = (float)jarg2; 
+  result = (double)(arg1)->getGainByParameter(arg2);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_fr_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1getLossByIndex(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  jdouble jresult = 0 ;
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
+  int arg2 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(LPAggregWrapper **)&jarg1; 
+  arg2 = (int)jarg2; 
+  result = (double)(arg1)->getLossByIndex(arg2);
+  jresult = (jdouble)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_fr_inria_soctrace_tools_paje_lpaggreg_core_jni_lpaggregJNI_LPAggregWrapper_1getLossByParameter(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+  jdouble jresult = 0 ;
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
+  float arg2 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(LPAggregWrapper **)&jarg1; 
+  arg2 = (float)jarg2; 
+  result = (double)(arg1)->getLossByParameter(arg2);
+  jresult = (jdouble)result; 
   return jresult;
 }
 
