@@ -28,20 +28,18 @@ USA.
 
 __Configure SWIG parameters__
 
-                $ cd swig
+		$ cd swig
 
 Open swig.sh script with your text editor and fill the fields with the
 right values :
 
-SRC is the location of lpaggreg library source files
-
-PACKAGE is the package name of future java interface files
-
-OUTDIR is the location where will be generated java interface files
+SRC is the location of lpaggreg library source files.
+PACKAGE is the package name of future java interface files.
+OUTDIR is the location where will be generated java interface files.
 
 __Generate interface files__
 
-                $ ./swig.sh
+		$ ./swig.sh
 
 __Compile__
 
