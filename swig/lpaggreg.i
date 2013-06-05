@@ -28,16 +28,60 @@
 
 %module lpaggreg
 %{
-#include "LPAggregWrapper.h"
+#include <LPAggregWrapper.h>
+#include <VLPAggregWrapper.h>
+#include <MLPAggregWrapper.h>
 %}
 
 class LPAggregWrapper {
 	public:
+
 		/*Constructor*/
 		LPAggregWrapper();
 
 		/*Destructor*/
 		virtual ~LPAggregWrapper();
+
+		/*Algo step 1 : compute qualities*/
+		virtual void computeQualities(bool normalization)=0;
+
+		/*Algo step 2 : compute parts for a parameter*/
+		virtual void computeParts(float parameter)=0;
+
+		/*Algo step 2 : compute relevant parameter list by using dichotomy*/
+		virtual void computeDichotomy(float threshold)=0;
+
+		/*Get the part with in index "index"*/
+		int getPart(int index);
+
+		/*Get the part number*/
+		int getPartNumber();
+
+		/*Get the parameter with index "index"*/
+		float getParameter(int index);
+
+		/*Get the parameter number*/
+		int getParameterNumber();
+
+		/*Get the gain by index*/
+		double getGainByIndex(int index);
+
+		/*Get the gain by parameter*/
+		double getGainByParameter(float parameter);
+
+		/*Get the loss by index*/
+		double getLossByIndex(int index);
+
+		/*Get the loss by parameter*/
+		double getLossByParameter(float parameter);
+};
+
+class VLPAggregWrapper : public LPAggregWrapper{
+
+	public:
+
+		VLPAggregWrapper();
+		virtual ~VLPAggregWrapper();
 
 		/*Create a new empty vector in the input matrix, at the end of the matrix*/
 		void newVector();
@@ -57,17 +101,84 @@ class LPAggregWrapper {
 		/*Algo step 2 : compute relevant parameter list by using dichotomy*/
 		void computeDichotomy(float threshold);
 
+		/*Get the vector number*/
+		int getVectorNumber();
+
+		/*Get the vector size*/
+		int getVectorSize();
+		
 		/*Get the part with in index "index"*/
 		int getPart(int index);
 
 		/*Get the part number*/
 		int getPartNumber();
 
-		/*Get the vector number*/
-		int getVectorNumber();
+		/*Get the parameter with index "index"*/
+		float getParameter(int index);
+
+		/*Get the parameter number*/
+		int getParameterNumber();
+
+		/*Get the gain by index*/
+		double getGainByIndex(int index);
+
+		/*Get the gain by parameter*/
+		double getGainByParameter(float parameter);
+
+		/*Get the loss by index*/
+		double getLossByIndex(int index);
+
+		/*Get the loss by parameter*/
+		double getLossByParameter(float parameter);
+};
+
+class MLPAggregWrapper : public LPAggregWrapper{
+
+	public:
+
+		MLPAggregWrapper();
+		virtual ~MLPAggregWrapper();
+
+		void newMatrix();
+
+		/*Add a new element to the last positioned in the matrix i*/
+		void addToMatrix(double element, int i);
+
+		/*Add a new element to the vector with index j in the matrix i*/
+		void addToMatrix(double element, int i, int j);
+
+		/*Create a new empty vector in the input cubic matrix, at the end of the last positioned matrix*/
+		void newVector();
+
+		/*Add a new element to the last positioned vector in the current matrix*/
+		void addToVector(double element);
+
+		/*Add a new element to the vector with index "index" in the last positioned matrix*/
+		void addToVector(double element, int index);
+
+		/*Algo step 1 : compute qualities*/
+		void computeQualities(bool normalization);
+
+		/*Algo step 2 : compute parts for a parameter*/
+		void computeParts(float parameter);
+
+		/*Algo step 2 : compute relevant parameter list by using dichotomy*/
+		void computeDichotomy(float threshold);
+
+		/*Get the matrix number*/
+		int getMatrixNumber();
+
+		/*Get the matrix size*/
+		int getMatrixSize();
 
 		/*Get the vector size*/
 		int getVectorSize();
+		
+		/*Get the part with in index "index"*/
+		int getPart(int index);
+
+		/*Get the part number*/
+		int getPartNumber();
 
 		/*Get the parameter with index "index"*/
 		float getParameter(int index);
