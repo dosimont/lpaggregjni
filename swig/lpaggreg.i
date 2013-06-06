@@ -106,30 +106,6 @@ class VLPAggregWrapper : public LPAggregWrapper{
 
 		/*Get the vector size*/
 		int getVectorSize();
-		
-		/*Get the part with in index "index"*/
-		int getPart(int index);
-
-		/*Get the part number*/
-		int getPartNumber();
-
-		/*Get the parameter with index "index"*/
-		float getParameter(int index);
-
-		/*Get the parameter number*/
-		int getParameterNumber();
-
-		/*Get the gain by index*/
-		double getGainByIndex(int index);
-
-		/*Get the gain by parameter*/
-		double getGainByParameter(float parameter);
-
-		/*Get the loss by index*/
-		double getLossByIndex(int index);
-
-		/*Get the loss by parameter*/
-		double getLossByParameter(float parameter);
 };
 
 class MLPAggregWrapper : public LPAggregWrapper{
@@ -173,28 +149,4 @@ class MLPAggregWrapper : public LPAggregWrapper{
 
 		/*Get the vector size*/
 		int getVectorSize();
-		
-		/*Get the part with in index "index"*/
-		int getPart(int index);
-
-		/*Get the part number*/
-		int getPartNumber();
-
-		/*Get the parameter with index "index"*/
-		float getParameter(int index);
-
-		/*Get the parameter number*/
-		int getParameterNumber();
-
-		/*Get the gain by index*/
-		double getGainByIndex(int index);
-
-		/*Get the gain by parameter*/
-		double getGainByParameter(float parameter);
-
-		/*Get the loss by index*/
-		double getLossByIndex(int index);
-
-		/*Get the loss by parameter*/
-		double getLossByParameter(float parameter);
 };
