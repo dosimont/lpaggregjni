@@ -212,13 +212,25 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
 
 
 #include <LPAggregWrapper.h>
-#include <VLPAggregWrapper.h>
-#include <MLPAggregWrapper.h>
 
 
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+SWIGEXPORT jlong JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_new_1LPAggregWrapper(JNIEnv *jenv, jclass jcls, jint jarg1) {
+  jlong jresult = 0 ;
+  int arg1 ;
+  LPAggregWrapper *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = (int)jarg1; 
+  result = (LPAggregWrapper *)new LPAggregWrapper(arg1);
+  *(LPAggregWrapper **)&jresult = result; 
+  return jresult;
+}
+
 
 SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_delete_1LPAggregWrapper(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
@@ -227,45 +239,6 @@ SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_l
   (void)jcls;
   arg1 = *(LPAggregWrapper **)&jarg1; 
   delete arg1;
-}
-
-
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_LPAggregWrapper_1computeQualities(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
-  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
-  bool arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(LPAggregWrapper **)&jarg1; 
-  arg2 = jarg2 ? true : false; 
-  (arg1)->computeQualities(arg2);
-}
-
-
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_LPAggregWrapper_1computeParts(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
-  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
-  float arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(LPAggregWrapper **)&jarg1; 
-  arg2 = (float)jarg2; 
-  (arg1)->computeParts(arg2);
-}
-
-
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_LPAggregWrapper_1computeDichotomy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
-  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
-  float arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(LPAggregWrapper **)&jarg1; 
-  arg2 = (float)jarg2; 
-  (arg1)->computeDichotomy(arg2);
 }
 
 
@@ -401,339 +374,175 @@ SWIGEXPORT jdouble JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jn
 }
 
 
-SWIGEXPORT jlong JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_new_1VLPAggregWrapper(JNIEnv *jenv, jclass jcls) {
-  jlong jresult = 0 ;
-  VLPAggregWrapper *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  result = (VLPAggregWrapper *)new VLPAggregWrapper();
-  *(VLPAggregWrapper **)&jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_delete_1VLPAggregWrapper(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  VLPAggregWrapper *arg1 = (VLPAggregWrapper *) 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(VLPAggregWrapper **)&jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_VLPAggregWrapper_1newVector(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  VLPAggregWrapper *arg1 = (VLPAggregWrapper *) 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(VLPAggregWrapper **)&jarg1; 
-  (arg1)->newVector();
-}
-
-
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_VLPAggregWrapper_1addToVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
-  VLPAggregWrapper *arg1 = (VLPAggregWrapper *) 0 ;
-  double arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(VLPAggregWrapper **)&jarg1; 
-  arg2 = (double)jarg2; 
-  (arg1)->addToVector(arg2);
-}
-
-
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_VLPAggregWrapper_1addToVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2, jint jarg3) {
-  VLPAggregWrapper *arg1 = (VLPAggregWrapper *) 0 ;
-  double arg2 ;
-  int arg3 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(VLPAggregWrapper **)&jarg1; 
-  arg2 = (double)jarg2; 
-  arg3 = (int)jarg3; 
-  (arg1)->addToVector(arg2,arg3);
-}
-
-
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_VLPAggregWrapper_1computeQualities(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
-  VLPAggregWrapper *arg1 = (VLPAggregWrapper *) 0 ;
+SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_LPAggregWrapper_1computeQualities(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
   bool arg2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(VLPAggregWrapper **)&jarg1; 
+  arg1 = *(LPAggregWrapper **)&jarg1; 
   arg2 = jarg2 ? true : false; 
   (arg1)->computeQualities(arg2);
 }
 
 
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_VLPAggregWrapper_1computeParts(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
-  VLPAggregWrapper *arg1 = (VLPAggregWrapper *) 0 ;
+SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_LPAggregWrapper_1computeParts(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
   float arg2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(VLPAggregWrapper **)&jarg1; 
+  arg1 = *(LPAggregWrapper **)&jarg1; 
   arg2 = (float)jarg2; 
   (arg1)->computeParts(arg2);
 }
 
 
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_VLPAggregWrapper_1computeDichotomy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
-  VLPAggregWrapper *arg1 = (VLPAggregWrapper *) 0 ;
+SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_LPAggregWrapper_1computeDichotomy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
   float arg2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(VLPAggregWrapper **)&jarg1; 
+  arg1 = *(LPAggregWrapper **)&jarg1; 
   arg2 = (float)jarg2; 
   (arg1)->computeDichotomy(arg2);
 }
 
 
-SWIGEXPORT jint JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_VLPAggregWrapper_1getVectorNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jint jresult = 0 ;
-  VLPAggregWrapper *arg1 = (VLPAggregWrapper *) 0 ;
-  int result;
+SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_LPAggregWrapper_1setValue_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jdouble jarg3) {
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
+  int arg2 ;
+  double arg3 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(VLPAggregWrapper **)&jarg1; 
-  result = (int)(arg1)->getVectorNumber();
-  jresult = (jint)result; 
-  return jresult;
+  arg1 = *(LPAggregWrapper **)&jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (double)jarg3; 
+  (arg1)->setValue(arg2,arg3);
 }
 
 
-SWIGEXPORT jint JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_VLPAggregWrapper_1getVectorSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jint jresult = 0 ;
-  VLPAggregWrapper *arg1 = (VLPAggregWrapper *) 0 ;
-  int result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(VLPAggregWrapper **)&jarg1; 
-  result = (int)(arg1)->getVectorSize();
-  jresult = (jint)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_new_1MLPAggregWrapper(JNIEnv *jenv, jclass jcls) {
-  jlong jresult = 0 ;
-  MLPAggregWrapper *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  result = (MLPAggregWrapper *)new MLPAggregWrapper();
-  *(MLPAggregWrapper **)&jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_delete_1MLPAggregWrapper(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  MLPAggregWrapper *arg1 = (MLPAggregWrapper *) 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  arg1 = *(MLPAggregWrapper **)&jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_MLPAggregWrapper_1newMatrix(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  MLPAggregWrapper *arg1 = (MLPAggregWrapper *) 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(MLPAggregWrapper **)&jarg1; 
-  (arg1)->newMatrix();
-}
-
-
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_MLPAggregWrapper_1addToMatrix_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2, jint jarg3) {
-  MLPAggregWrapper *arg1 = (MLPAggregWrapper *) 0 ;
+SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_LPAggregWrapper_1push_1back_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
   double arg2 ;
-  int arg3 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(MLPAggregWrapper **)&jarg1; 
+  arg1 = *(LPAggregWrapper **)&jarg1; 
   arg2 = (double)jarg2; 
-  arg3 = (int)jarg3; 
-  (arg1)->addToMatrix(arg2,arg3);
+  (arg1)->push_back(arg2);
 }
 
 
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_MLPAggregWrapper_1addToMatrix_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2, jint jarg3, jint jarg4) {
-  MLPAggregWrapper *arg1 = (MLPAggregWrapper *) 0 ;
-  double arg2 ;
+SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_LPAggregWrapper_1addVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(LPAggregWrapper **)&jarg1; 
+  (arg1)->addVector();
+}
+
+
+SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_LPAggregWrapper_1setValue_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3, jdouble jarg4) {
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  double arg4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(LPAggregWrapper **)&jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (int)jarg3; 
+  arg4 = (double)jarg4; 
+  (arg1)->setValue(arg2,arg3,arg4);
+}
+
+
+SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_LPAggregWrapper_1push_1back_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jdouble jarg3) {
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
+  int arg2 ;
+  double arg3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(LPAggregWrapper **)&jarg1; 
+  arg2 = (int)jarg2; 
+  arg3 = (double)jarg3; 
+  (arg1)->push_back(arg2,arg3);
+}
+
+
+SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_LPAggregWrapper_1addMatrix(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(LPAggregWrapper **)&jarg1; 
+  (arg1)->addMatrix();
+}
+
+
+SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_LPAggregWrapper_1setValue_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3, jint jarg4, jdouble jarg5) {
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
+  int arg2 ;
   int arg3 ;
   int arg4 ;
+  double arg5 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(MLPAggregWrapper **)&jarg1; 
-  arg2 = (double)jarg2; 
+  arg1 = *(LPAggregWrapper **)&jarg1; 
+  arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
   arg4 = (int)jarg4; 
-  (arg1)->addToMatrix(arg2,arg3,arg4);
+  arg5 = (double)jarg5; 
+  (arg1)->setValue(arg2,arg3,arg4,arg5);
 }
 
 
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_MLPAggregWrapper_1newVector(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  MLPAggregWrapper *arg1 = (MLPAggregWrapper *) 0 ;
+SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_LPAggregWrapper_1addVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
+  int arg2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(MLPAggregWrapper **)&jarg1; 
-  (arg1)->newVector();
+  arg1 = *(LPAggregWrapper **)&jarg1; 
+  arg2 = (int)jarg2; 
+  (arg1)->addVector(arg2);
 }
 
 
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_MLPAggregWrapper_1addToVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
-  MLPAggregWrapper *arg1 = (MLPAggregWrapper *) 0 ;
-  double arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(MLPAggregWrapper **)&jarg1; 
-  arg2 = (double)jarg2; 
-  (arg1)->addToVector(arg2);
-}
-
-
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_MLPAggregWrapper_1addToVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2, jint jarg3) {
-  MLPAggregWrapper *arg1 = (MLPAggregWrapper *) 0 ;
-  double arg2 ;
+SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_LPAggregWrapper_1push_1back_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3, jdouble jarg4) {
+  LPAggregWrapper *arg1 = (LPAggregWrapper *) 0 ;
+  int arg2 ;
   int arg3 ;
+  double arg4 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(MLPAggregWrapper **)&jarg1; 
-  arg2 = (double)jarg2; 
+  arg1 = *(LPAggregWrapper **)&jarg1; 
+  arg2 = (int)jarg2; 
   arg3 = (int)jarg3; 
-  (arg1)->addToVector(arg2,arg3);
+  arg4 = (double)jarg4; 
+  (arg1)->push_back(arg2,arg3,arg4);
 }
 
-
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_MLPAggregWrapper_1computeQualities(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jboolean jarg2) {
-  MLPAggregWrapper *arg1 = (MLPAggregWrapper *) 0 ;
-  bool arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(MLPAggregWrapper **)&jarg1; 
-  arg2 = jarg2 ? true : false; 
-  (arg1)->computeQualities(arg2);
-}
-
-
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_MLPAggregWrapper_1computeParts(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
-  MLPAggregWrapper *arg1 = (MLPAggregWrapper *) 0 ;
-  float arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(MLPAggregWrapper **)&jarg1; 
-  arg2 = (float)jarg2; 
-  (arg1)->computeParts(arg2);
-}
-
-
-SWIGEXPORT void JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_MLPAggregWrapper_1computeDichotomy(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jfloat jarg2) {
-  MLPAggregWrapper *arg1 = (MLPAggregWrapper *) 0 ;
-  float arg2 ;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(MLPAggregWrapper **)&jarg1; 
-  arg2 = (float)jarg2; 
-  (arg1)->computeDichotomy(arg2);
-}
-
-
-SWIGEXPORT jint JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_MLPAggregWrapper_1getMatrixNumber(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jint jresult = 0 ;
-  MLPAggregWrapper *arg1 = (MLPAggregWrapper *) 0 ;
-  int result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(MLPAggregWrapper **)&jarg1; 
-  result = (int)(arg1)->getMatrixNumber();
-  jresult = (jint)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jint JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_MLPAggregWrapper_1getMatrixSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jint jresult = 0 ;
-  MLPAggregWrapper *arg1 = (MLPAggregWrapper *) 0 ;
-  int result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(MLPAggregWrapper **)&jarg1; 
-  result = (int)(arg1)->getMatrixSize();
-  jresult = (jint)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jint JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_MLPAggregWrapper_1getVectorSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jint jresult = 0 ;
-  MLPAggregWrapper *arg1 = (MLPAggregWrapper *) 0 ;
-  int result;
-  
-  (void)jenv;
-  (void)jcls;
-  (void)jarg1_;
-  arg1 = *(MLPAggregWrapper **)&jarg1; 
-  result = (int)(arg1)->getVectorSize();
-  jresult = (jint)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_VLPAggregWrapper_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-    jlong baseptr = 0;
-    (void)jenv;
-    (void)jcls;
-    *(LPAggregWrapper **)&baseptr = *(VLPAggregWrapper **)&jarg1;
-    return baseptr;
-}
-
-SWIGEXPORT jlong JNICALL Java_fr_inria_soctrace_tools_ocelotl_core_lpaggreg_jni_lpaggregJNI_MLPAggregWrapper_1SWIGUpcast(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-    jlong baseptr = 0;
-    (void)jenv;
-    (void)jcls;
-    *(LPAggregWrapper **)&baseptr = *(MLPAggregWrapper **)&jarg1;
-    return baseptr;
-}
 
 #ifdef __cplusplus
 }

@@ -29,27 +29,15 @@
 %module lpaggreg
 %{
 #include <LPAggregWrapper.h>
-#include <VLPAggregWrapper.h>
-#include <MLPAggregWrapper.h>
 %}
 
 class LPAggregWrapper {
 	public:
-
-		/*Constructor*/
-		LPAggregWrapper();
+			/*Constructor*/
+		LPAggregWrapper(int dimension);
 
 		/*Destructor*/
 		virtual ~LPAggregWrapper();
-
-		/*Algo step 1 : compute qualities*/
-		virtual void computeQualities(bool normalization)=0;
-
-		/*Algo step 2 : compute parts for a parameter*/
-		virtual void computeParts(float parameter)=0;
-
-		/*Algo step 2 : compute relevant parameter list by using dichotomy*/
-		virtual void computeDichotomy(float threshold)=0;
 
 		/*Get the part with in index "index"*/
 		int getPart(int index);
@@ -74,23 +62,6 @@ class LPAggregWrapper {
 
 		/*Get the loss by parameter*/
 		double getLossByParameter(float parameter);
-};
-
-class VLPAggregWrapper : public LPAggregWrapper{
-
-	public:
-
-		VLPAggregWrapper();
-		virtual ~VLPAggregWrapper();
-
-		/*Create a new empty vector in the input matrix, at the end of the matrix*/
-		void newVector();
-
-		/*Add a new element to the last positioned vector*/
-		void addToVector(double element);
-
-		/*Add a new element to the vector with index "index"*/
-		void addToVector(double element, int index);
 
 		/*Algo step 1 : compute qualities*/
 		void computeQualities(bool normalization);
@@ -101,52 +72,14 @@ class VLPAggregWrapper : public LPAggregWrapper{
 		/*Algo step 2 : compute relevant parameter list by using dichotomy*/
 		void computeDichotomy(float threshold);
 
-		/*Get the vector number*/
-		int getVectorNumber();
+		void setValue(int i, double value);
+		void push_back(double value);
+		void addVector();
+		void setValue(int i, int j, double value);
+		void push_back(int i, double value);
+		void addMatrix();
+		void setValue(int i, int j, int k, double value);
+		void addVector(int i);
+		void push_back(int i, int j, double value);
 
-		/*Get the vector size*/
-		int getVectorSize();
-};
-
-class MLPAggregWrapper : public LPAggregWrapper{
-
-	public:
-
-		MLPAggregWrapper();
-		virtual ~MLPAggregWrapper();
-
-		void newMatrix();
-
-		/*Add a new element to the last positioned in the matrix i*/
-		void addToMatrix(double element, int i);
-
-		/*Add a new element to the vector with index j in the matrix i*/
-		void addToMatrix(double element, int i, int j);
-
-		/*Create a new empty vector in the input cubic matrix, at the end of the last positioned matrix*/
-		void newVector();
-
-		/*Add a new element to the last positioned vector in the current matrix*/
-		void addToVector(double element);
-
-		/*Add a new element to the vector with index "index" in the last positioned matrix*/
-		void addToVector(double element, int index);
-
-		/*Algo step 1 : compute qualities*/
-		void computeQualities(bool normalization);
-
-		/*Algo step 2 : compute parts for a parameter*/
-		void computeParts(float parameter);
-
-		/*Algo step 2 : compute relevant parameter list by using dichotomy*/
-		void computeDichotomy(float threshold);
-
-		/*Get the matrix number*/
-		int getMatrixNumber();
-
-		/*Get the matrix size*/
-		int getMatrixSize();
-
-		/*Get the vector size*/
-		int getVectorSize();
 };
