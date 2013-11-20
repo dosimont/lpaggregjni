@@ -1,0 +1,3 @@
+LPAGGREG_SRC=/home/dosimont/Documents/github/lpaggreg/src/
+TARGET_PACKAGE=fr.inria.soctrace.tools.ocelotl.core.lpaggreg.jni 
+OUTPUT_DIRECTORY=/home/dosimont/Documents/github/ocelotl/fr.inria.soctrace.tools.ocelotl.core/src/fr/inria/soctrace/tools/ocelotl/core/lpaggreg/jni
