@@ -31,11 +31,11 @@ __Configure SWIG parameters__
 Open `configuration` file with your text editor and fill the fields with the
 right values :
 
-LPAGGREG_SRC is the location of lpaggreg library source files.
+`LPAGGREG_SRC` is the location of lpaggreg library source files.
 
-TARGET_PACKAGE is the package name of future java interface files.
+`TARGET_PACKAGE`is the package name of future java interface files.
 
-OUTPUT_DIRECTORY is the location where will be generated java interface files.
+`OUTPUT_DIRECTORY` is the location where will be generated java interface files.
 
 
 
