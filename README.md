@@ -37,7 +37,7 @@ https://github.com/dosimont/lpaggreg
 __Configure SWIG parameters__
 
 Open `configuration` file with your text editor and fill the fields with the
-right values :
+right values:
 
 `LPAGGREG_SRC` is the location of lpaggreg library source files.
 
