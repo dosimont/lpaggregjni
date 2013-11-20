@@ -26,6 +26,14 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301,
 USA.
 
+__Dependancies__
+
+Swig presence is mandatory. 
+http://www.swig.org/
+
+You also need to compile and install lpaggreg library:
+https://github.com/dosimont/lpaggreg
+
 __Configure SWIG parameters__
 
 Open `configuration` file with your text editor and fill the fields with the
