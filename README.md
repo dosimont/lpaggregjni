@@ -26,28 +26,23 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301,
 USA.
 
-__Configure SWIG parameters__
+__Configuration__
 
-		$ cd swig
-
-Open swig.sh script with your text editor and fill the fields with the
+Open `configuration` file with your text editor and fill the fields with the
 right values :
 
-SRC is the location of lpaggreg library source files.
-PACKAGE is the package name of future java interface files.
-OUTDIR is the location where will be generated java interface files.
-
-__Generate interface files__
-
-		$ ./swig.sh
+`LPAGGREG_SRC is the location of lpaggreg library source files.`
+`TARGET_PACKAGE is the package name of future java interface files.`
+`OUTPUT_DIRECTORY is the location where will be generated java interface files.`
 
 __Compile__
 
-  		$ cd ../Release
 		$ make
 		
 __Install__
 
-		$ cd ..
-		$ ./install.sh
+		# make install
 
+__Clean__
+
+		$ make clean
