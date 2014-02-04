@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/bash -x
 source ../configuration
 cp lpaggreg.i $LPAGGREG_SRC
 cd $LPAGGREG_SRC
