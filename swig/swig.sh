@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/bash -x
 source ../configuration
 mkdir -p $OUTPUT_DIRECTORY
 cp lpaggreg.i $LPAGGREG_SRC
