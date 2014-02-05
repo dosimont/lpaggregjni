@@ -28,7 +28,7 @@
 
 %module lpaggreg
 %{
-#include <LPAggregWrapper.h>
+#include <lpaggreg/LPAggregWrapper.h>
 %}
 
 class LPAggregWrapper {
