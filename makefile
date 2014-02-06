@@ -7,4 +7,5 @@ all:
 install:
 	./install.sh
 clean:
+	rm -fr src java
 	(cd Release; make clean)

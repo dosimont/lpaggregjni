@@ -1,3 +1,2 @@
-LPAGGREG_SRC=/home/dosimont/Documents/github/lpaggreg/src/
-TARGET_PACKAGE=fr.inria.soctrace.tools.ocelotl.core.lpaggreg.jni 
-OUTPUT_DIRECTORY=~/jni/
+TARGET_PACKAGE=fr.inria.soctrace.tools.ocelotl.core.timeaggregmanager.jni
+
