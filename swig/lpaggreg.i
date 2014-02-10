@@ -28,10 +28,11 @@
 
 %module lpaggreg
 %{
-#include <lpaggreg/LPAggregWrapper.h>
+#include <lpaggreg/OLPAggregWrapper.h>
+#include <lpaggreg/DLPAggregWrapper.h>
 %}
 
-class LPAggregWrapper {
+class OLPAggregWrapper {
 	public:
 			/*Constructor*/
 		LPAggregWrapper(int dimension);
@@ -81,5 +82,69 @@ class LPAggregWrapper {
 		void setValue(int i, int j, int k, double value);
 		void addVector(int i);
 		void push_back(int i, int j, double value);
-
+		
 };
+
+class DLPAggregWrapper {
+
+	public:
+		
+		/*Constructor*/
+		DLPAggregWrapper(int dimension);
+
+		/*Destructor*/
+		virtual ~DLPAggregWrapper();
+
+		int newLeaf(int parent, int id);
+
+		int newNode(int parent, int id);
+
+		int newRoot(int id);
+
+		void validate();
+
+		bool hasFullAggregation(int id);
+
+		/*Get the part with in index "index"*/
+		int getPart(int id, int index);
+
+		/*Get the part number*/
+		int getPartNumber();
+
+		/*Get the parameter with index "index"*/
+		float getParameter(int index);
+
+		/*Get the parameter number*/
+		int getParameterNumber();
+
+		/*Get the gain by index*/
+		double getGainByIndex(int index);
+
+		/*Get the gain by parameter*/
+		double getGainByParameter(double parameter);
+
+		/*Get the loss by index*/
+		double getLossByIndex(int index);
+
+		/*Get the loss by parameter*/
+		double getLossByParameter(double parameter);
+
+		/*Algo step 1 : compute qualities*/
+		void computeQualities(bool normalization);
+
+		/*Algo step 2 : compute parts for a parameter*/
+		void computeParts(double parameter);
+
+		/*Algo step 2 : compute relevant parameter list by using dichotomy*/
+		void computeDichotomy(float threshold);
+
+		void setValue(int id, int i, double value);
+		void push_back(int id, double value);
+
+		void addVector(int id);
+		void setValue(int id, int i, int j, double value);
+		void push_back(int id, int i, double value);
+
+		
+};
+
