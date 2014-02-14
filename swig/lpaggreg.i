@@ -35,10 +35,10 @@
 class OLPAggregWrapper {
 	public:
 			/*Constructor*/
-		LPAggregWrapper(int dimension);
+		OLPAggregWrapper(int dimension);
 
 		/*Destructor*/
-		virtual ~LPAggregWrapper();
+		virtual ~OLPAggregWrapper();
 
 		/*Get the part with in index "index"*/
 		int getPart(int index);

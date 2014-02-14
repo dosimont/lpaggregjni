@@ -11,3 +11,4 @@ Debug/*
 .settings
 .settings/*
 liblpaggregjni.so*
+*.java
