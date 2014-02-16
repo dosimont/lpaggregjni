@@ -8,5 +8,5 @@ sudo rm $DIR/$LIB
 sudo cp Release/$LSLIB $DIR
 sudo ln -s $DIR/$LSLIB $DIR/$LIB
 echo "/usr/lib/" > /etc/ld.so.conf.d/lpaggreg.conf
-ldconfig -n /usr/lib
+ldconfig
 exit 0
