@@ -1,2 +1,2 @@
-TARGET_PACKAGE=fr.inria.soctrace.tools.ocelotl.core.timeaggregmanager.jni
+TARGET_PACKAGE=fr.inria.dlpaggreg.jni
 
