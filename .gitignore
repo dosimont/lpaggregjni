@@ -4,11 +4,7 @@
 *.so
 *~
 *.swp
-.cproject
-.project
 Debug
 Debug/*
-.settings
-.settings/*
 liblpaggregjni.so*
 *.java
