@@ -44,7 +44,7 @@ all: liblpaggregjni.so.3.1
 liblpaggregjni.so.3.1: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L../../lpaggreg/Static32 -m32 -shared -o "liblpaggregjni.so.3.1" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L../../lpaggreg/Static32 -shared -o "liblpaggregjni.so.3.1" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
