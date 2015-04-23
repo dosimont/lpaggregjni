@@ -196,7 +196,7 @@
 								<option id="gnu.cpp.link.option.libs.1270803425" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="lpaggreg"/>
 								</option>
-								<option id="gnu.cpp.link.option.flags.163982712" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="" valueType="string"/>
+								<option id="gnu.cpp.link.option.flags.163982712" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="-m32" valueType="string"/>
 								<option id="gnu.cpp.link.option.paths.2019022670" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="../../lpaggreg/Static32"/>
 								</option>
