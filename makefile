@@ -1,18 +1,25 @@
 
+.PHONY: all otl-linux otl-linux-86 otl-win64 otl-win32 swig install clean
+
 # All Target
-all:	swig	
+all:	
+	(cd swig; ./swig.sh)
 	(cd linux-shared; make)
 
-otl-linux:	swig	
+otl-linux:	
+	(cd swig; ./swig.sh)
 	(cd otl-linux; make)
 
-otl-linux-x86:	swig	
+otl-linux-x86:	
+	(cd swig; ./swig.sh)
 	(cd otl-linux-x86; make)
 
-otl-win64:	swig	
+otl-win64:	
+	(cd swig; ./swig.sh)
 	(cd otl-win64; make)
 
-otl-win32:	swig	
+otl-win32:	
+	(cd swig; ./swig.sh)
 	(cd otl-win32; make)
 
 install:
