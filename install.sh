@@ -1,6 +1,6 @@
 #!/bin/bash -x
 LIB=liblpaggregjni.so
-cd Release
+cd shared-linux
 LSLIB=`ls ${LIB}*`
 cd ..
 DIR=/usr/lib

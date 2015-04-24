@@ -17,7 +17,7 @@ CXX_DEPS += \
 src/%.o: ../src/%.cxx
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
-	g++ -I/usr/java/latest/include -I../../lpaggreg/src -I/usr/java/latest/include/linux -O1 -Wall -m32 -c -fmessage-length=0 -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	i686-w64-mingw32-g++ -I. -I/usr/java/latest/include -I/usr/java/latest/include/linux -O0 -c lpaggreg_wrap.cxx -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)"
 	@echo 'Finished building: $<'
 	@echo ' '
 

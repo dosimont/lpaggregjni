@@ -9,6 +9,7 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include src/subdir.mk
+-include Release/src/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -44,7 +45,7 @@ all: liblpaggregjni.so.3.1
 liblpaggregjni.so.3.1: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -shared -o "liblpaggregjni.so.3.1" $(OBJS) $(USER_OBJS) $(LIBS)
+	i686-w64-mingw32-g++ -Wl,-s -shared -Wl,-subsystem,windows -mthreads -Wl,--out-implib,liblpaggreg.a -o lpaggregjni.dll lpaggreg_wrap.o -D_JNI_IMPLEMENTATION_ -Wl,--kill-at -static -Wl,--whole-archive -L . -l lpaggreg -Wl,--no-whole-archive -shared
 	@echo 'Finished building target: $@'
 	@echo ' '
 

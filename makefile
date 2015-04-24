@@ -1,21 +1,30 @@
 
 # All Target
-all:	
-	(cd swig; ./swig.sh)
-	(cd Release; make)
+all:	swig	
+	(cd linux-shared; make)
 
-ocelotl:	
-	(cd swig; ./swig.sh)
-	(cd Ocelotl; make)
+otl-linux:	swig	
+	(cd otl-linux; make)
 
-ocelotl32:	
-	(cd swig; ./swig.sh)
-	(cd Ocelotl32; make)
+otl-linux-x86:	swig	
+	(cd otl-linux-x86; make)
+
+otl-win64:	swig	
+	(cd otl-win64; make)
+
+otl-win32:	swig	
+	(cd otl-win32; make)
 
 install:
 	./install.sh
+
+swig:
+	(cd swig; ./swig.sh)
+
 clean:
 	rm -fr src java
-	(cd Release; make clean)
-	(cd Ocelotl; make clean)
-	(cd Ocelotl32; make clean)
+	(cd linux-shared; make clean)
+	(cd otl-linux; make clean)
+	(cd otl-linux-x86; make clean)
+	(cd otl-win32; make clean)
+	(cd otl-win64; make clean)
