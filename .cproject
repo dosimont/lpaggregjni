@@ -255,7 +255,7 @@
 								<option id="gnu.cpp.compiler.option.debugging.level.878724946" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.dialect.std.1862635711" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.warnings.allwarn.295752470" name="All warnings (-Wall)" superClass="gnu.cpp.compiler.option.warnings.allwarn" value="false" valueType="boolean"/>
-								<option id="gnu.cpp.compiler.option.other.other.828727485" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c lpaggreg_wrap.cxx" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.other.other.828727485" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c ../src/lpaggreg_wrap.cxx" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1429288505" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.base.1014823949" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.base">
@@ -326,7 +326,7 @@
 								<option id="gnu.cpp.compiler.option.debugging.level.1911563834" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.dialect.std.1102011234" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.warnings.allwarn.968024310" name="All warnings (-Wall)" superClass="gnu.cpp.compiler.option.warnings.allwarn" value="false" valueType="boolean"/>
-								<option id="gnu.cpp.compiler.option.other.other.787746114" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c lpaggreg_wrap.cxx" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.other.other.787746114" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c ../src/lpaggreg_wrap.cxx" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.104428765" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.base.2080530016" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.base">
