@@ -28,8 +28,8 @@
 
 %module lpaggreg
 %{
-#include <lpaggreg/OLPAggregWrapper.h>
-#include <lpaggreg/DLPAggregWrapper.h>
+#include <OLPAggregWrapper.h>
+#include <DLPAggregWrapper.h>
 %}
 
 class OLPAggregWrapper {
