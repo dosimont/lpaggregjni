@@ -248,6 +248,7 @@
 							<tool command="x86_64-w64-mingw32-g++" commandLinePattern="${COMMAND} ${FLAGS}" id="cdt.managedbuild.tool.gnu.cpp.compiler.base.1199248600" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base">
 								<option id="gnu.cpp.compiler.option.include.paths.2038326342" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="."/>
+									<listOptionValue builtIn="false" value="/usr/local/include"/>
 									<listOptionValue builtIn="false" value="/usr/java/latest/include"/>
 									<listOptionValue builtIn="false" value="/usr/java/latest/include/linux"/>
 								</option>
@@ -319,6 +320,7 @@
 							<tool command="i686-w64-mingw32-g++" commandLinePattern="${COMMAND} ${FLAGS}" id="cdt.managedbuild.tool.gnu.cpp.compiler.base.248566142" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base">
 								<option id="gnu.cpp.compiler.option.include.paths.1781840142" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="."/>
+									<listOptionValue builtIn="false" value="/usr/local/include"/>
 									<listOptionValue builtIn="false" value="/usr/java/latest/include"/>
 									<listOptionValue builtIn="false" value="/usr/java/latest/include/linux"/>
 								</option>
