@@ -1,5 +1,5 @@
 
-.PHONY: all otl-linux otl-linux-86 otl-win64 otl-win32 swig install clean
+.PHONY: all otl-linux otl-linux-x86 otl-win64 otl-win32 swig install clean
 
 # All Target
 all:	
