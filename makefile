@@ -6,11 +6,11 @@ all:
 	(cd swig; ./swig.sh)
 	(cd linux-shared; make)
 
-otl-linux:	
+otl-linux:
 	(cd swig; ./swig.sh)
 	(cd otl-linux; make)
 
-otl-linux-x86:	
+otl-linux-x86:
 	(cd swig; ./swig.sh)
 	(cd otl-linux-x86; make)
 
