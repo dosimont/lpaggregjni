@@ -1,0 +1,3 @@
+[submodule "external/lpaggreg"]
+	path = external/lpaggreg
+	url = https://github.com/dosimont/lpaggreg.git

@@ -1,6 +1,6 @@
 #!/bin/bash -x
 source ../configuration
-LPAGGREG=lpaggreg
+LPAGGREG=../external/lpaggreg
 LPAGGREG_SRC=$LPAGGREG/src
 LPAGGREGJNI_SRC=../src
 JAVA_BIN=../java
